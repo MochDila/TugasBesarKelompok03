@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6a7c34b2-8797-4ffb-955c-eff30546e18a">
+	<property name="ireport.zoom" value="3.4522712143931042"/>
+	<property name="ireport.x" value="101"/>
+	<property name="ireport.y" value="350"/>
+	<subDataset name="MasterBahanBaku" uuid="8642a390-d530-4592-ad8c-7990119ceb4b">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     t_master_bahan_baku.`kode_bahan_baku` AS t_master_bahan_baku_kode_bahan_baku,
+     t_master_bahan_baku.`nama_bahan_baku` AS t_master_bahan_baku_nama_bahan_baku,
+     t_master_bahan_baku.`tgl_masuk` AS t_master_bahan_baku_tgl_masuk,
+     t_master_bahan_baku.`satuan_jumlah` AS t_master_bahan_baku_satuan_jumlah,
+     t_master_bahan_baku.`jumlah_bahan_baku` AS t_master_bahan_baku_jumlah_bahan_baku,
+     t_master_bahan_baku.`harga_bahan_baku` AS t_master_bahan_baku_harga_bahan_baku
+FROM
+     `t_master_bahan_baku` t_master_bahan_baku]]>
+		</queryString>
+		<field name="t_master_bahan_baku_kode_bahan_baku" class="java.lang.String"/>
+		<field name="t_master_bahan_baku_nama_bahan_baku" class="java.lang.String"/>
+		<field name="t_master_bahan_baku_tgl_masuk" class="java.lang.String"/>
+		<field name="t_master_bahan_baku_satuan_jumlah" class="java.lang.String"/>
+		<field name="t_master_bahan_baku_jumlah_bahan_baku" class="java.lang.String"/>
+		<field name="t_master_bahan_baku_harga_bahan_baku" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="PerTahun" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     *,
+     t_laporan_transaksi.`kode_laporan_transaksi` AS t_laporan_transaksi_kode_laporan_transaksi,
+     t_laporan_transaksi.`nama_barang` AS t_laporan_transaksi_nama_barang,
+     t_laporan_transaksi.`harga_barang` AS t_laporan_transaksi_harga_barang,
+     t_laporan_transaksi.`email_pelanggan` AS t_laporan_transaksi_email_pelanggan,
+     t_laporan_transaksi.`jumlah_pemesanan` AS t_laporan_transaksi_jumlah_pemesanan,
+     t_laporan_transaksi.`tanggal_pemesanan` AS t_laporan_transaksi_tanggal_pemesanan,
+     t_laporan_transaksi.`total_biaya` AS t_laporan_transaksi_total_biaya,
+     t_laporan_transaksi.`kode_barang` AS t_laporan_transaksi_kode_barang,
+     t_laporan_transaksi.`grand_total` AS t_laporan_transaksi_grand_total,
+     t_laporan_transaksi.`uang_bayar` AS t_laporan_transaksi_uang_bayar,
+     t_laporan_transaksi.`kembalian` AS t_laporan_transaksi_kembalian,
+     t_laporan_transaksi.`kode_transaksi` AS t_laporan_transaksi_kode_transaksi,
+     t_laporan_transaksi.`total_pendapatan` AS t_laporan_transaksi_total_pendapatan
+FROM
+     `t_laporan_transaksi` t_laporan_transaksi
+WHERE
+t_laporan_transaksi.`Tahun` = $P{PerTahun}]]>
+	</queryString>
+	<field name="kode_laporan_transaksi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_barang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga_barang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email_pelanggan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jumlah_pemesanan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_pemesanan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_biaya" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kode_barang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="grand_total" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="uang_bayar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kembalian" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kode_transaksi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_pendapatan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Bulan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tahun" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_laporan_transaksi_kode_laporan_transaksi" class="java.lang.String"/>
+	<field name="t_laporan_transaksi_nama_barang" class="java.lang.String"/>
+	<field name="t_laporan_transaksi_harga_barang" class="java.lang.String"/>
+	<field name="t_laporan_transaksi_email_pelanggan" class="java.lang.String"/>
+	<field name="t_laporan_transaksi_jumlah_pemesanan" class="java.lang.String"/>
+	<field name="t_laporan_transaksi_tanggal_pemesanan" class="java.lang.String"/>
+	<field name="t_laporan_transaksi_total_biaya" class="java.lang.String"/>
+	<field name="t_laporan_transaksi_kode_barang" class="java.lang.String"/>
+	<field name="t_laporan_transaksi_grand_total" class="java.lang.String"/>
+	<field name="t_laporan_transaksi_uang_bayar" class="java.lang.String"/>
+	<field name="t_laporan_transaksi_kembalian" class="java.lang.String"/>
+	<field name="t_laporan_transaksi_kode_transaksi" class="java.lang.String"/>
+	<field name="t_laporan_transaksi_total_pendapatan" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="85" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" x="0" y="50" width="555" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<text><![CDATA[+6285320509481]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="274eb8db-ccff-43dc-b55a-2cc0d72ed602" x="0" y="0" width="555" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARTIN FOOD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" x="0" y="25" width="555" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<text><![CDATA[Hegarmanah, Jatinagor, Kab. Sumedang , Jawa Barat]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="bf6a5718-695b-44fa-b12a-afbb11195881" x="0" y="82" width="555" height="1"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="274eb8db-ccff-43dc-b55a-2cc0d72ed602" mode="Opaque" x="0" y="5" width="555" height="30" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA TRANSAKSI DAN PENDAPATAN]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="274eb8db-ccff-43dc-b55a-2cc0d72ed602" mode="Opaque" x="0" y="7" width="555" height="15" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Periode Tahun:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="6bae56f9-9719-4640-8874-b507b6baaa60" x="72" y="7" width="119" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Urbanist" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PerTahun}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" mode="Opaque" x="0" y="29" width="74" height="20" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Transaksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" mode="Opaque" x="74" y="29" width="113" height="20" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" mode="Opaque" x="187" y="29" width="75" height="20" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Harga Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" mode="Opaque" x="262" y="30" width="54" height="18" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jmlh Pesan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" mode="Opaque" x="316" y="29" width="59" height="20" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Biaya]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" mode="Opaque" x="375" y="29" width="115" height="20" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email Pembeli]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" mode="Opaque" x="490" y="29" width="64" height="20" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tgl Pembelian]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="74" y="29" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="0" y="29" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="186" y="30" width="1" height="18"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="489" y="30" width="1" height="19"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="316" y="29" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="554" y="29" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="0" y="29" width="555" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="0" y="48" width="555" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="261" y="30" width="1" height="18"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="375" y="30" width="1" height="19"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="0" y="-5" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="1" y="19" width="554" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="554" y="0" width="1" height="19"/>
+			</line>
+			<line>
+				<reportElement uuid="3940bcdb-70d5-4189-988a-886898028846" x="316" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="3940bcdb-70d5-4189-988a-886898028846" x="261" y="0" width="1" height="19"/>
+			</line>
+			<line>
+				<reportElement uuid="3940bcdb-70d5-4189-988a-886898028846" x="74" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="3940bcdb-70d5-4189-988a-886898028846" x="489" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="3940bcdb-70d5-4189-988a-886898028846" x="375" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="3940bcdb-70d5-4189-988a-886898028846" x="186" y="0" width="1" height="20"/>
+			</line>
+			<textField>
+				<reportElement uuid="27181b1c-4a8d-41df-9b10-ccf6c9939df7" x="16" y="0" width="48" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Urbanist"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kode_laporan_transaksi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8cdc6f7d-2e6b-46d8-8004-d4f08ef11086" x="86" y="0" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Urbanist"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f0023f51-aa06-4ce9-b7cd-60112ebf0134" x="191" y="0" width="70" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{harga_barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ee57ad57-db3e-496e-8c5f-3cf4b9bd6282" x="262" y="0" width="54" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jumlah_pemesanan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ddfebdc8-f242-4341-9e16-bcc06fcd2494" x="317" y="0" width="58" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_biaya}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0caf61ab-33c3-4373-b029-7b02a5a7817e" x="375" y="0" width="115" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email_pelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1ca0f9a2-5ac8-4a18-94cf-c4fa66caea76" x="490" y="0" width="64" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanggal_pemesanan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="12" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="192" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" mode="Opaque" x="382" y="83" width="153" height="20" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[      Bandung, ]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="6bae56f9-9719-4640-8874-b507b6baaa60" x="453" y="83" width="82" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" x="383" y="102" width="152" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Penanggung Jawab]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="fbd6d7e3-877a-43f6-b157-611802f4509d" x="409" y="179" width="100" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="274eb8db-ccff-43dc-b55a-2cc0d72ed602" mode="Opaque" x="0" y="8" width="554" height="15" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="c8d7b184-afe2-45d2-9e10-6b901b482e2d" x="0" y="30" width="555" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="274eb8db-ccff-43dc-b55a-2cc0d72ed602" mode="Opaque" x="356" y="39" width="198" height="20" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Pendapatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cfe3f518-c4c0-41cd-a254-621fbfe87cbe" x="471" y="39" width="84" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Rp.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e7b0644a-4d79-4b89-9e69-b16c8e3595aa" x="490" y="39" width="64" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_pendapatan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

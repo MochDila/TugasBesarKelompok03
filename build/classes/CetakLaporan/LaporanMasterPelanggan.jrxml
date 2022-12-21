@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6a7c34b2-8797-4ffb-955c-eff30546e18a">
+	<property name="ireport.zoom" value="1.3660269107301517"/>
+	<property name="ireport.x" value="18"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="MasterBahanBaku" uuid="8642a390-d530-4592-ad8c-7990119ceb4b">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     t_master_bahan_baku.`kode_bahan_baku` AS t_master_bahan_baku_kode_bahan_baku,
+     t_master_bahan_baku.`nama_bahan_baku` AS t_master_bahan_baku_nama_bahan_baku,
+     t_master_bahan_baku.`tgl_masuk` AS t_master_bahan_baku_tgl_masuk,
+     t_master_bahan_baku.`satuan_jumlah` AS t_master_bahan_baku_satuan_jumlah,
+     t_master_bahan_baku.`jumlah_bahan_baku` AS t_master_bahan_baku_jumlah_bahan_baku,
+     t_master_bahan_baku.`harga_bahan_baku` AS t_master_bahan_baku_harga_bahan_baku
+FROM
+     `t_master_bahan_baku` t_master_bahan_baku]]>
+		</queryString>
+		<field name="t_master_bahan_baku_kode_bahan_baku" class="java.lang.String"/>
+		<field name="t_master_bahan_baku_nama_bahan_baku" class="java.lang.String"/>
+		<field name="t_master_bahan_baku_tgl_masuk" class="java.lang.String"/>
+		<field name="t_master_bahan_baku_satuan_jumlah" class="java.lang.String"/>
+		<field name="t_master_bahan_baku_jumlah_bahan_baku" class="java.lang.String"/>
+		<field name="t_master_bahan_baku_harga_bahan_baku" class="java.lang.String"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[SELECT * FROM t_akun_profile_pelanggan]]>
+	</queryString>
+	<field name="kode_pelanggan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_depan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_belakang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_lengkap" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tempat_lahir" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_lahir" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_kelamin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_telepon" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kelurahan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kecamatan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="password" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="85" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" x="0" y="50" width="555" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<text><![CDATA[+6285320509481]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="274eb8db-ccff-43dc-b55a-2cc0d72ed602" x="0" y="0" width="555" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARTIN FOOD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" x="0" y="25" width="555" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<text><![CDATA[Hegarmanah, Jatinagor, Kab. Sumedang , Jawa Barat]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="bf6a5718-695b-44fa-b12a-afbb11195881" x="0" y="82" width="555" height="1"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="274eb8db-ccff-43dc-b55a-2cc0d72ed602" mode="Opaque" x="0" y="5" width="555" height="30" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA PELANGGAN]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="274eb8db-ccff-43dc-b55a-2cc0d72ed602" mode="Opaque" x="0" y="7" width="555" height="15" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tanggal:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="6bae56f9-9719-4640-8874-b507b6baaa60" x="43" y="7" width="119" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Urbanist" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" mode="Opaque" x="0" y="29" width="94" height="20" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" mode="Opaque" x="94" y="29" width="104" height="20" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Lengkap]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" mode="Opaque" x="198" y="29" width="142" height="20" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" mode="Opaque" x="340" y="29" width="89" height="20" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No Telepon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" mode="Opaque" x="429" y="29" width="126" height="20" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="94" y="30" width="1" height="19"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="0" y="29" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="198" y="30" width="1" height="19"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="429" y="29" width="1" height="19"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="340" y="30" width="1" height="19"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="554" y="29" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="0" y="29" width="555" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="0" y="48" width="555" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="0" y="-5" width="1" height="25"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="1" y="19" width="554" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="c20c26f0-4421-40f2-ba5f-595936890959" x="554" y="0" width="1" height="19"/>
+			</line>
+			<line>
+				<reportElement uuid="3940bcdb-70d5-4189-988a-886898028846" x="340" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="3940bcdb-70d5-4189-988a-886898028846" x="429" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="3940bcdb-70d5-4189-988a-886898028846" x="198" y="0" width="1" height="19"/>
+			</line>
+			<textField>
+				<reportElement uuid="ab158371-3a6a-4efe-bde1-f644fe0fbed7" x="33" y="0" width="61" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Urbanist"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kode_pelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4fd21d31-fd78-48d8-abd0-3491b014f4f5" x="95" y="0" width="103" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_lengkap}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="745b96bc-813f-47df-abb6-cc58807884e4" x="430" y="0" width="125" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="3940bcdb-70d5-4189-988a-886898028846" x="94" y="0" width="1" height="20"/>
+			</line>
+			<textField>
+				<reportElement uuid="f567bc27-f5de-4fbd-a544-afa55a90bb12" x="198" y="0" width="143" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d438375f-2540-4473-8e65-e6cddf24ff99" x="341" y="0" width="88" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{no_telepon}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="134" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" mode="Opaque" x="374" y="27" width="153" height="20" backcolor="#DEE1E5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[      Bandung, ]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="6bae56f9-9719-4640-8874-b507b6baaa60" x="445" y="27" width="82" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" x="375" y="46" width="152" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Penanggung Jawab]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="fbd6d7e3-877a-43f6-b157-611802f4509d" x="401" y="132" width="100" height="1"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

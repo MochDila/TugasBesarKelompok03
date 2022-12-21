@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="600" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e0fe447c-ff71-4000-a4b0-11d27d72852e">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="EMAIL" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     t_pembayaran.`kode_pembayaran` AS t_pembayaran_kode_pembayaran,
+     t_pembayaran.`nama_barang` AS t_pembayaran_nama_barang,
+     t_pembayaran.`harga_barang` AS t_pembayaran_harga_barang,
+     t_pembayaran.`email_pelanggan` AS t_pembayaran_email_pelanggan,
+     t_pembayaran.`jumlah_pemesanan` AS t_pembayaran_jumlah_pemesanan,
+     t_pembayaran.`tanggal_pemesanan` AS t_pembayaran_tanggal_pemesanan,
+     t_pembayaran.`total_biaya` AS t_pembayaran_total_biaya,
+     t_pembayaran.`kode_barang` AS t_pembayaran_kode_barang,
+     t_pembayaran.`grand_total` AS t_pembayaran_grand_total,
+     t_pembayaran.`uang_bayar` AS t_pembayaran_uang_bayar,
+     t_pembayaran.`kembalian` AS t_pembayaran_kembalian,
+     t_pembayaran.`kode_transaksi` AS t_pembayaran_kode_transaksi
+FROM
+     `t_pembayaran` t_pembayaran where email_pelanggan = $P{EMAIL}]]>
+	</queryString>
+	<field name="t_pembayaran_kode_pembayaran" class="java.lang.String"/>
+	<field name="t_pembayaran_nama_barang" class="java.lang.String"/>
+	<field name="t_pembayaran_harga_barang" class="java.lang.String"/>
+	<field name="t_pembayaran_email_pelanggan" class="java.lang.String"/>
+	<field name="t_pembayaran_jumlah_pemesanan" class="java.lang.String"/>
+	<field name="t_pembayaran_tanggal_pemesanan" class="java.lang.String"/>
+	<field name="t_pembayaran_total_biaya" class="java.lang.String"/>
+	<field name="t_pembayaran_kode_barang" class="java.lang.String"/>
+	<field name="t_pembayaran_grand_total" class="java.lang.String"/>
+	<field name="t_pembayaran_uang_bayar" class="java.lang.String"/>
+	<field name="t_pembayaran_kembalian" class="java.lang.String"/>
+	<field name="t_pembayaran_kode_transaksi" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="101" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="274eb8db-ccff-43dc-b55a-2cc0d72ed602" x="0" y="0" width="555" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARTIN FOOD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" x="0" y="25" width="555" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<text><![CDATA[Hegarmanah, Jatinagor, Kab. Sumedang , Jawa Barat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" x="0" y="50" width="555" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<text><![CDATA[+6285320509481]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" x="0" y="75" width="555" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<text><![CDATA[+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="7" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="108" splitType="Stretch">
+			<textField>
+				<reportElement uuid="f081d8d4-1a70-4978-a2f7-b2654e44ba65" x="117" y="0" width="200" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{t_pembayaran_kode_transaksi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="de2078ac-b4e3-4143-9f74-257a5163ad40" x="117" y="25" width="200" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{t_pembayaran_email_pelanggan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d24d9267-ecf0-4fc3-ad7d-da3a471ebc1d" x="5" y="25" width="112" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d24d9267-ecf0-4fc3-ad7d-da3a471ebc1d" x="5" y="0" width="112" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Transaksi	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d24d9267-ecf0-4fc3-ad7d-da3a471ebc1d" x="5" y="83" width="100" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d24d9267-ecf0-4fc3-ad7d-da3a471ebc1d" x="448" y="83" width="107" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Biaya]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d24d9267-ecf0-4fc3-ad7d-da3a471ebc1d" x="100" y="83" width="124" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d24d9267-ecf0-4fc3-ad7d-da3a471ebc1d" x="224" y="83" width="112" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Harga Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d24d9267-ecf0-4fc3-ad7d-da3a471ebc1d" x="336" y="83" width="112" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jumlah Pesan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" x="0" y="50" width="555" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<text><![CDATA[+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement uuid="982c153c-1781-4e0d-ba3e-b120a7d00da0" x="5" y="0" width="100" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{t_pembayaran_kode_barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e280021a-606b-43cc-b84d-19f2204718d9" x="100" y="0" width="124" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{t_pembayaran_nama_barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3727ac4b-2198-4bea-81f3-9481c20d1d71" x="224" y="0" width="112" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{t_pembayaran_harga_barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="55d034c0-212a-47a8-9d1f-367ec83efe86" x="336" y="0" width="112" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{t_pembayaran_jumlah_pemesanan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2bcb6a03-27fe-498c-99f6-c9455177c7df" x="448" y="0" width="107" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{t_pembayaran_total_biaya}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="4" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="6" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="156" splitType="Stretch">
+			<textField>
+				<reportElement uuid="f9ea99e8-fd69-4eb2-aae2-5652c47fbb24" x="448" y="33" width="107" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{t_pembayaran_grand_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="033667ca-1ee2-450f-8576-540456d1b20d" x="448" y="56" width="107" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{t_pembayaran_uang_bayar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ae548b5a-d262-4e4e-a7d9-94dbe251cc2f" x="448" y="81" width="107" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{t_pembayaran_kembalian}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d24d9267-ecf0-4fc3-ad7d-da3a471ebc1d" x="336" y="33" width="112" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grand Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d24d9267-ecf0-4fc3-ad7d-da3a471ebc1d" x="336" y="56" width="112" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Uang Tunai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d24d9267-ecf0-4fc3-ad7d-da3a471ebc1d" x="336" y="81" width="112" height="25"/>
+				<textElement>
+					<font fontName="Urbanist" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kembalian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" x="0" y="0" width="555" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<text><![CDATA[+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" x="0" y="105" width="555" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="12"/>
+				</textElement>
+				<text><![CDATA[+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d6ed1cd-ecea-4979-98b5-1f1c075255b1" x="0" y="130" width="555" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Urbanist" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TERIMA KASIH]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

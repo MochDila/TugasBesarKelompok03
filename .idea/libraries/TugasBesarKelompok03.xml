@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="TugasBesarKelompok03">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/servlet-api-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/commons-digester-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/commons-beanutils-1.8.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/commons-beanutils-1.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/swing-worker-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/commons-beanutils-core-1.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jasperreports-5.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/com.lowagie.text-2.1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/commons-beanutils-1.8.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/commons-logging-1.1.1-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jdt-compiler-3.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/commons-collections-2.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jcommon-1.0.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/swingx-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TimingFramework-0.55.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jcalendar-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/filters-2.0.235.jar!/" />
+      <root url="jar://$PROJECT_DIR$/commons-beanutils-bean-collections-1.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/mysql-connector-java-5.1.24-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/groovy-all-2.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
