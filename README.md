@@ -26,7 +26,7 @@ Kemudian import database. Database telah di sediakan di dalam source code, dapat
 Setelah database di import harap hapus beberapa bagian seperti pada gambar di bawah ini:
 ![screenshot](Penting/Database.gif)
 
-Untuk menjalankan program aplikasi ini, hal yang harus dilakukan yaitu dengan menajalankan file java ini:
+Untuk menjalankan program aplikasi ini, hal yang harus dilakukan yaitu dengan menjalankan file java ini:
 [FormPilihanAplikasi.java](src/FormGUI/FormPilihanAplikasi.java)
 
 
